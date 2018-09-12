@@ -1,0 +1,28 @@
+.page-layout__viewport {
+  padding-top: 4rem;
+}
+
+.page-layout__nav-item--active {
+  font-weight: bold;
+  //text-decoration: underline;
+}
+
+.Logo {
+  width: 20em;
+  height: 20em;
+  margin-bottom: -5em;
+}
+
+
+.footer {
+  padding: 5em;
+  //background-color: rgb(33, 33, 33);
+  //color: rgba(255, 255, 255, 0.54);
+  width: 100%;
+  text-align: center;
+}
+
+.ethId {
+  display: flex;
+  align-items: center;
+}
