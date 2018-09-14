@@ -17,8 +17,16 @@ let Cards = ((props) => {
       paddingTop: '5em',
     backgroundColor: getMuiTheme().palette.primary3Color}}>
 
-      <h1>MACS stuff</h1>
-      <p>Come learn about what we are doing!</p>
+    </div>
+
+  )
+})
+
+export default Cards
+
+
+/*
+
 
 
       <div className="cards">
@@ -40,17 +48,6 @@ let Cards = ((props) => {
           </Card>
         </Link>
       </div >
-
-
-    </div>
-
-  )
-})
-
-export default Cards
-
-
-/*
 
 
 

@@ -12,9 +12,7 @@ let Panels = (props) => {
 
 
       <Pannel2
-        header="Meetings"
-        text="To be announced, we are trying to figure out a time that works for all the execs. Also, I think a date
-        picker would look cool here. Let me know on the Discord!"
+        header="Stuff Here"
        />
 
       <Footer />

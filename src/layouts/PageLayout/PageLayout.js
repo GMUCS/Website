@@ -9,7 +9,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 import { white } from 'material-ui/styles/colors';
 import DropDownMenu from '../../components/Menu'
-import config from "./config"
+import config from "../../config"
 import { lightBaseTheme } from 'material-ui/styles';
 
 export const PageLayout = ({ children }) => {
