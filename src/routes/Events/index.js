@@ -1,7 +1,7 @@
 import { injectReducer } from '../../store/reducers'
 
 export default (store) => ({
-  path : 'Calender',
+  path : 'Events',
   /*  Async getComponent is only invoked when route matches   */
   getComponent (nextState, cb) {
     /*  Webpack - use 'require.ensure' to create a split point
@@ -13,12 +13,12 @@ export default (store) => ({
       const reducer = require('./modules/main').default
 
       /*  Add the reducer to the store on key 'counter'  */
-      injectReducer(store, { key: 'Calender', reducer })
+      injectReducer(store, { key: 'Events', reducer })
 
       /*  Return getComponent   */
       cb(null, container)
 
     /* Webpack named bundle   */
-    }, 'Calender')
+    }, 'Events')
   }
 })

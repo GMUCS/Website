@@ -23,7 +23,7 @@ let Panels = (props) => {
 
       <Pannel2
         header={"Hello " + config.title + "!"}
-        text={config.title + " is all about community and computer science education and excellence"}
+        text={config.title + " is all about community and computer science education and community"}
       />
 
       <Pannel3
