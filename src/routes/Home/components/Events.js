@@ -7,20 +7,21 @@ export default [
       end: new Date(2018, 8, 20, 15),
     },
     {
-      id: 0,
+      id: 1,
       title: 'Club Days',
       //allDay: true,
       start: new Date(2018, 8, 21, 9),
       end: new Date(2018, 8, 21, 15),
     },
-    /*
+    
    {
-      id: 5,
-      title: 'Conference',
-      start: new Date(2018, 9, 11),
-      end: new Date(2018, 9, 13),
+      id: 2,
+      title: 'Talk With the Chair',
+      start: new Date(2018, 10, 2, 17),
+      end: new Date(2018, 10, 2, 19),
       desc: 'Big conference for important people',
     },
+    /*
     {
       id: 6,
       title: 'Meeting',

@@ -30,7 +30,7 @@ let Panels = (props) => {
       header= {config.title + " stuff"}
       text="Come learn about what we are doing!"
       />
-      <div style = {{height:"580px", display:"flex", flexDirection: "column", padding: 40, margin: "auto", width: "100%", maxWidth:"1280px"}}> 
+      <div style = {{height:"670px", display:"flex", flexDirection: "column", padding: 40, margin: "auto", width: "100%", maxWidth:"1280px"}}> 
         <MyCalendar />
       </div>
 
