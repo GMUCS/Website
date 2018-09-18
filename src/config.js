@@ -1,7 +1,7 @@
 export default {
     menu: [
         //{text: "Vote", link: "Vote"},
-        {text: "Events", link: "Events"},
+        {text: "Events", link: "CardEvents"},
         //{text: "Register Your Gamer Tag", link: "RegisterYourAddress"},
     ],
     title: "MaCS",

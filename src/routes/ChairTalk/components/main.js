@@ -6,7 +6,7 @@ export const Page = ({}) => (
 
   <div style={{ margin: '0 auto' }} >
 
-    <Pannel2 header="asd" text="The chair"/>
+    <Pannel2 header="PlaceHolder" text="The chair"/>
     
 
     <Footer />
