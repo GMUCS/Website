@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import { getMuiTheme } from 'material-ui/styles';
 import { Pannel3 } from '../../../components/Pannel';
 import Events from "../../Events"
-
+import FullScreen from "./fullScreen"
 let Cards = ((props) => {
 
   return (
