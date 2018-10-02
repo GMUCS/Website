@@ -15,7 +15,7 @@ let Panels = (props) => {
         text=""
         header="Learn more about upcoming events"
        />
-
+      
       <Cards/>
       <Footer />
     </div>
