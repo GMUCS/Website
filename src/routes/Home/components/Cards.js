@@ -7,8 +7,10 @@ import { getMuiTheme } from 'material-ui/styles';
 import { Pannel3 } from '../../../components/Pannel';
 
 
-let Cards = ((props) => {
+let Cards = (({props}) => {
 
+  console.log(props)
+  
   return (
     <div style = {{         
       paddingLeft: '0em',
@@ -17,18 +19,40 @@ let Cards = ((props) => {
       paddingTop: '5em',
     backgroundColor: getMuiTheme().palette.primary3Color}}>
 
-    </div>
 
+      {props.events.map((event, i)=>{
+        
+        return (
+          <div className="cards" key={i}>
+          <Link to={event["Link"]}>
+            <Card>
+              <CardHeader title={event.title}
+                subtitle={event["sub-title"]}>
+              </CardHeader>
+              <CardMedia
+                overlay={<CardTitle title={event["overlay-title"]} subtitle={event["overlay-subtite"]} />}
+              >
+                <img src={event["image"]} alt="" className="cardImages" />
+              </CardMedia>
+              <CardTitle
+                expandable={true}
+                subtitle="temp"
+              >
+            </CardTitle>
+            </Card>
+          </Link>
+        </div >
+
+      )
+      })
+    }
+          </div>
   )
 })
 
 export default Cards
 
-
 /*
-
-
-
       <div className="cards">
         <Link to="Calender">
           <Card>

@@ -10,17 +10,23 @@ import PlaceHolder from '../../../Images/PlaceHolder.png'
 import Cards from "./Cards"
 import Footer from "../../../components/Footer"
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { Pannel2, Pannel3 } from "../../../components/Pannel"
+import { Pannel2, Pannel3, EventPannel } from "../../../components/Pannel"
 import {MyCalendar} from "./Calendar";
 import config from "../../../config"
 import {AutoRotatingCarousel, Slide} from "./material-auto-rotating-carousel/src"
 
 
 
-let Panels = (props) => {
+let Panels = ({props}) => {
   return (
     <div className="pannel">
 
+    <EventPannel backgroundImage={props.eventsPannelImage} />
+    <Cards props={props}/>
+      <div style = {{height:"670px", display:"flex", flexDirection: "column", padding: 40, margin: "auto", width: "100%", maxWidth:"1280px"}}> 
+        <MyCalendar events={props.events}/>
+      </div>
+      
 
       <Pannel2
         header={"Hello " + config.title + "!"}
@@ -31,9 +37,9 @@ let Panels = (props) => {
       header= {config.title + " stuff"}
       text="Come learn about what we are doing!"
       />
-      <div style = {{height:"670px", display:"flex", flexDirection: "column", padding: 40, margin: "auto", width: "100%", maxWidth:"1280px"}}> 
-        <MyCalendar />
-      </div>
+
+
+
 
       
       <Footer />
@@ -44,8 +50,26 @@ let Panels = (props) => {
 export const Page = (props) => {
 
   return (
-
     <div style={{ margin: '0 auto' }} >
+
+    
+
+    
+      <Panels props={props}/>
+
+    </div>
+  )
+}
+
+
+Page.propTypes = {
+}
+
+export default Page
+
+
+
+/*
 
 <div style={{ position: 'relative', width: "100%", height: 800 }}>
       <AutoRotatingCarousel
@@ -72,13 +96,4 @@ export const Page = (props) => {
     </AutoRotatingCarousel>
 
 </div>
-      <Panels />
-    </div>
-  )
-}
-
-//<Cards />
-Page.propTypes = {
-}
-
-export default Page
+*/

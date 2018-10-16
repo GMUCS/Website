@@ -6,13 +6,12 @@ import Page from '../components/Home'
 
 
 const mapDispatchToProps = {
-    getBalance : () => getBalance()
 
 }
 
 const mapStateToProps = (state) => ({
-    baseAccountBalance: state.Home.baseAccountBalance,
-    baseAccount: state.Home.baseAccount
+    eventsPannelImage: state.Home.eventsPannelImage,
+    events: state.Home.events
 })
 
 

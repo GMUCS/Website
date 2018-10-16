@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { getMuiTheme } from "material-ui/styles";
-
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 
 const style = {
     margin: 0,
@@ -9,6 +9,7 @@ const style = {
     textAlign: "center",
     padding: "10em",
 }
+
 export const Pannel1 = ({text, header, children}) => {
 
     return (
@@ -35,5 +36,37 @@ export const Pannel3 = ({text, header, children, id}) => {
     <h1>{header}</h1>
     <p>{text}</p>
   </div>
+    )
+}
+
+
+export const EventPannel = ({backgroundImage}) => {
+    
+    const style = {
+
+      margin: 0,
+      width: "100%",
+      height: "20em"
+    }
+
+    return (
+
+      <div style={{...style}}>
+        <Card>
+        <CardMedia
+          overlay={<CardTitle title="Our Upcomming Events" />}
+        >
+          <img src={backgroundImage} alt="" className="cardImages" style={{height: "20em"}} />
+
+        </CardMedia>
+        <CardTitle
+          expandable={true}
+          subtitle="Subtitle"
+        >
+          BlockChain
+      </CardTitle>
+      </Card>
+      </div>
+
     )
 }
