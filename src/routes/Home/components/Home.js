@@ -24,23 +24,13 @@ let Panels = ({props}) => {
     <EventPannel backgroundImage={props.eventsPannelImage} />
     <Cards props={props}/>
       <div style = {{height:"670px", display:"flex", flexDirection: "column", padding: 40, margin: "auto", width: "100%", maxWidth:"1280px"}}> 
-        <MyCalendar events={props.events}/>
+        <MyCalendar onEventClick={props.onEventChange} events={props.events}/>
       </div>
       
-
       <Pannel2
         header={"Hello " + config.title + "!"}
         text={config.title + " is all about community and computer science education and community"}
       />
-
-      <Pannel3
-      header= {config.title + " stuff"}
-      text="Come learn about what we are doing!"
-      />
-
-
-
-
       
       <Footer />
     </div>
@@ -48,15 +38,9 @@ let Panels = ({props}) => {
 }
 
 export const Page = (props) => {
-
   return (
     <div style={{ margin: '0 auto' }} >
-
-    
-
-    
       <Panels props={props}/>
-
     </div>
   )
 }
@@ -96,4 +80,12 @@ export default Page
     </AutoRotatingCarousel>
 
 </div>
+
+
+      <Pannel3
+      header= {config.title + " stuff"}
+      text="Come learn about what we are doing!"
+      />
+
+
 */

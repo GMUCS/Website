@@ -44,9 +44,8 @@ export const EventPannel = ({backgroundImage}) => {
     
     const style = {
 
-      margin: 0,
       width: "100%",
-      height: "20em"
+      height: "25em"
     }
 
     return (
@@ -56,7 +55,7 @@ export const EventPannel = ({backgroundImage}) => {
         <CardMedia
           overlay={<CardTitle title="Our Upcomming Events" />}
         >
-          <img src={backgroundImage} alt="" className="cardImages" style={{height: "20em"}} />
+          <img src={backgroundImage} alt="" className="cardImages" style={{height: "25em"}} />
 
         </CardMedia>
         <CardTitle

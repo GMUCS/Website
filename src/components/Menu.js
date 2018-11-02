@@ -59,7 +59,7 @@ class AppBarExampleComposition extends Component {
             <div>
                 <AppBar
                     title={<Link to="/" style={{ "color": "white", "textDecoration": "none" }}>{this.props.title}</Link>}
-                    iconElementLeft={<HamburgerNavs items={this.props.menu} />}
+                    //iconElementLeft={<HamburgerNavs items={this.props.menu} />}
 
                 >
                         </AppBar>

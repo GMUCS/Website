@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
-import { baseAccountBalance, getBalance } from '../modules/home'
+import { onEventChange } from '../modules/home'
 
 
 import Page from '../components/Home'
 
 
 const mapDispatchToProps = {
-
+    onEventChange: (event) => onEventChange(event)
 }
 
 const mapStateToProps = (state) => ({

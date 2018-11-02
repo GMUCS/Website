@@ -4,27 +4,35 @@ import PlaceHolder from '../../../Images/PlaceHolder.png'
 import Logo from '../../../Images/Logo.png'
 import { Link } from 'react-router'
 import { getMuiTheme } from 'material-ui/styles';
-import { Pannel3 } from '../../../components/Pannel';
+import EventDialog from "../../../components/EventDialog"
 
 
 let Cards = (({props}) => {
 
-  console.log(props)
-  
   return (
     <div style = {{         
       paddingLeft: '0em',
       paddingRight: '0em',
       paddingBottom: '5em',
       paddingTop: '5em',
-    backgroundColor: getMuiTheme().palette.primary3Color}}>
-
+      backgroundColor: getMuiTheme().palette.primary3Color}}>
 
       {props.events.map((event, i)=>{
-        
         return (
-          <div className="cards" key={i}>
-          <Link to={event["Link"]}>
+          <div key={i}  className="cards">
+          <EventDialog event={event} 
+          onEventClose={()=>{
+            let changedEvent = event
+            changedEvent.open = false
+            return props.onEventChange(changedEvent)
+          }}/>
+
+          <div key={i} onClick={()=>{
+            let changedEvent = event
+            changedEvent.open = true
+            return props.onEventChange(changedEvent)
+          }}>
+          
             <Card>
               <CardHeader title={event.title}
                 subtitle={event["sub-title"]}>
@@ -40,8 +48,8 @@ let Cards = (({props}) => {
               >
             </CardTitle>
             </Card>
-          </Link>
         </div >
+        </div>
 
       )
       })
